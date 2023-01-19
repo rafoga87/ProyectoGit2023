@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ejemplo de AngularJS">
+  <meta name="keywords" content="HTML5, CSS3, Boostrap,AngularJS">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!--Para crear un sitio web receptivo, agregue la siguiente <meta> etiqueta a todas sus páginas web: -->
+
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/controller1.js"></script>
+  <title>Leccion 1 | Angular Js</title>
+</head>
+
+<body>
+  <h1>Bienvenido</h1>
+  <div class="alert alert-primary" role="alert">
+    This is a primary alert—check it out!
+  </div>
+
+  <div class="" ng-app="module1" ng-controller="controller1">
+
+    <p>Bienvenido,<span>{{nombre}}</span>,tu edad es <span>{{edad}}</span></p>
+    <p>Tu nombre es :{{nombre}}</p>
+    <p>Tu edad es :{{edad}}</p>
+    <p>The NAME is <span ng-bind="nombre"></span></p>
+    <p>The AGE is <span ng-bind="edad"></span></p>
+
+    <form class="">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" ng-model="nuevapersona.nombre">
+      <label for="edad">Edad:</label>
+      <input type="text" id="edad" ng-model="nuevapersona.edad">
+      <button type="button" name="button" ng-click="agregarPersona()">Adicionar persona</button>
+    </form>
+
+    <br>
+    <h3>Lista de personas :</h3>
+    <ul ng-repeat="persona in personas">
+      <li>
+        <p>{{persona.nombre}},{{persona.edad}}</p>
+      </li>
+    </ul>
+    <br>
+
+    <h3>Nuevo usuario :</h3>
+    <form class="">
+      <label for="id">idusuario:</label>
+      <input type="text" id="id" ng-model="newusuario.id">
+      <label for="name">Edad:</label>
+      <input type="text" id="name" ng-model="newusuario.name">
+      <button type="button" name="button" ng-click="addUsuario()">ADD usuarios</button>
+    </form>
+
+    <br>
+    <h3>Lista de usuarios :</h3>
+    <button type="button" name="button" ng-click="getListaUsuarios()">Lista usuarios</button>
+    <br>
+
+
+
+
+    <ul ng-repeat="usuario in usuarios">
+      <li>
+        <h2>{{usuario.id}}</h2>
+        <h3>{{usuario.name}}</h3>
+        <p>{{usuario.username}}</p>
+      </li>
+    </ul>
+
+<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+
+
+
+
+  </div>
+
+
+
+</body>
+
+</html>
